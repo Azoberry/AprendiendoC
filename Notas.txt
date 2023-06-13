@@ -1,0 +1,85 @@
+========Notas del curso de C==========
+Convencion de nombres
+camelCase
+ejemplo: fechaDeNacimiento
+Se utiliza:
+- Para variables
+
+snake_case
+ejemplo: fecha_de_nacimiento
+Se utiliza:
+- Para bases de datos
+
+SCREAMING_SNAKE_CASE
+ejemplo: FECHA_DE_NACIMIENTO
+Se utiliza:
+- Para constantes
+
+kebab-case
+ejemplo: fecha-de-nacimiento
+Se utiliza:
+- Para urls
+- Para el nombre de las carpetas
+
+=====================================
+Caracteres de modificacion
+%c Unico caracter
+%d Entero 
+%u Entero sin signo en base decimal
+%o Entero en base octal
+%x Entero en base hexadecimal
+%e Un numero real en coma flotante, con exponente
+%f Float
+%s Una cadena de Caracteres
+%p Puntero o direccion de memoria
+
+Importantes:
+%c Char
+%d Entero
+%f Float
+%s String
+%p Pointer or memory address
+=====================================
+Declaraciones
+//Constantes
+#define PI 3.14;
+#define EDAD 29;
+//Variables
+float sueldo = 15.456;
+=====================================
+Secuencia de escape
+\0 Nulo
+\b Retroceso
+\t Tabulador
+\n Salto de linea
+\f Salto de pagina
+\r Retorno de carro
+\" Comillas
+\? Signo de interrogacion
+\\ Barra invertida
+=====================================
+Operador &
+El operador [&] se utiliza para obtener la direccion de memoria de una variable.
+=====================================
+Operador *
+Declaración de un puntero: Cuando declaras una variable de tipo puntero, utilizas el operador * para indicar que esa variable es un puntero. 
+Por ejemplo:
+int *pNum;  // Declaración de un puntero a entero
+En este caso, * se coloca junto al tipo de dato (int) para indicar que pNum es un puntero a un entero.
+-------------------------------------
+Referencia a través de un puntero: Una vez que tienes un puntero, puedes utilizar el operador * para acceder al valor al que apunta el puntero. 
+Por ejemplo:
+int num = 10;
+int *pNum = &num;  // Guarda la dirección de memoria de 'num' en 'pNum'
+printf("%d", *pNum);  // Imprime el valor al que apunta 'pNum' (10)
+En este caso, * se coloca delante del puntero pNum para obtener el valor almacenado en la dirección de memoria a la que apunta.
+-------------------------------------
+Punteros a funciones: En C, también es posible declarar punteros a funciones. Utilizas el operador * para indicar que la variable es un puntero a función. 
+Por ejemplo:
+int suma(int a, int b) {
+    return a + b;
+}
+int (*pFunc)(int, int);  // Declaración de un puntero a función
+pFunc = &suma;  // Asignación de la dirección de la función 'suma' al puntero
+int resultado = (*pFunc)(2, 3);  // Llamada a la función a través del puntero
+=====================================
